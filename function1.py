@@ -63,3 +63,13 @@ print(connectURI("multi.com", "80"))
 print(connectURI(port="8080", server="multi.com"))
 
 print(globals())
+
+#오버로드를 지원안함(덮어쓰기)
+def times(a):
+    print(a)
+
+def times(a=0,b=0):
+    return a+b 
+
+print(times())
+print(times(a=5))
